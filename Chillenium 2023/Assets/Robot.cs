@@ -11,7 +11,8 @@ public class Robot : MonoBehaviour {
     public bool interact = false;
     //public string command = "follow";
     void Start() {
-        
+        GameObject inventor = GameObject.FindGameObjectWithTag("Inventor");
+        Physics2D.IgnoreCollision(inventor.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 
     void Update() {

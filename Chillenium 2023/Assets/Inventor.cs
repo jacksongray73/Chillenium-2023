@@ -17,7 +17,7 @@ public class Inventor : MonoBehaviour {
     
     // Start is called before the first frame update
     void Start() {
-        
+        Physics2D.IgnoreCollision(robot.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 
     void Awake() {
