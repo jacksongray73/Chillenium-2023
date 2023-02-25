@@ -5,13 +5,13 @@ using UnityEngine.InputSystem;
 
 public class Inventor : MonoBehaviour {
     [SerializeField] private float _maxSpeed, _acceleration, _jumpHeight;
-    [SerializeField] private LayerMask platformLayerMask;
+    [SerializeField] private LayerMask platformLayerMask, doorLayerMask;
     [SerializeField] public string controlStyle;
     [SerializeField] Robot robot;
     private float _speed = 0;
     private bool _left, _right, _jump, _interact, _canDoubleJump;
     private string _lastInput = "";
-    private Dictionary<string, bool> _inputs;
+    public Dictionary<string, bool> inputs;
     public string command;
 
     
@@ -28,33 +28,33 @@ public class Inventor : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         //Map inputs
-        _inputs = new Dictionary<string, bool>();
+        inputs = new Dictionary<string, bool>();
         if (controlStyle == "one-handed") {
-            _inputs.Add("Right", Input.GetKey(KeyCode.D));
-            _inputs.Add("Left", Input.GetKey(KeyCode.A));
-            _inputs.Add("Jump", Input.GetKeyDown(KeyCode.Space));
-            _inputs.Add("Action1", Input.GetKey(KeyCode.W));
-            _inputs.Add("Command", Input.GetKeyDown(KeyCode.S));
-            _inputs.Add("RightDown", Input.GetKeyDown(KeyCode.D));
-            _inputs.Add("LeftDown", Input.GetKeyDown(KeyCode.A));
+            inputs.Add("Right", Input.GetKey(KeyCode.D));
+            inputs.Add("Left", Input.GetKey(KeyCode.A));
+            inputs.Add("Jump", Input.GetKeyDown(KeyCode.Space));
+            inputs.Add("Interact", Input.GetKeyDown(KeyCode.W));
+            inputs.Add("Command", Input.GetKeyDown(KeyCode.S));
+            inputs.Add("RightDown", Input.GetKeyDown(KeyCode.D));
+            inputs.Add("LeftDown", Input.GetKeyDown(KeyCode.A));
         }
         else if (controlStyle == "two-handed") {
-            _inputs.Add("Right", Input.GetKey(KeyCode.D));
-            _inputs.Add("Left", Input.GetKey(KeyCode.A));
-            _inputs.Add("Jump", Input.GetKeyDown(KeyCode.J));
-            _inputs.Add("Action1", Input.GetKey(KeyCode.K));
-            _inputs.Add("Command", Input.GetKeyDown(KeyCode.L));
-            _inputs.Add("RightDown", Input.GetKeyDown(KeyCode.D));
-            _inputs.Add("LeftDown", Input.GetKeyDown(KeyCode.A));
+            inputs.Add("Right", Input.GetKey(KeyCode.D));
+            inputs.Add("Left", Input.GetKey(KeyCode.A));
+            inputs.Add("Jump", Input.GetKeyDown(KeyCode.J));
+            inputs.Add("Interact", Input.GetKeyDown(KeyCode.K));
+            inputs.Add("Command", Input.GetKeyDown(KeyCode.L));
+            inputs.Add("RightDown", Input.GetKeyDown(KeyCode.D));
+            inputs.Add("LeftDown", Input.GetKeyDown(KeyCode.A));
         }
         //else if (controlStyle == "controller") {
-        //    _inputs.Add("Right", Input.GetKey(KeyCode.D));
-        //    _inputs.Add("Left", Input.GetKey(KeyCode.A));
-        //    _inputs.Add("Jump", PlayerControls.);
-        //    _inputs.Add("Action1", Input.GetKey(KeyCode.W));
-        //    _inputs.Add("Command", Input.GetKeyDown(KeyCode.S));
-        //    _inputs.Add("RightDown", Input.GetKeyDown(KeyCode.D));
-        //    _inputs.Add("LeftDown", Input.GetKeyDown(KeyCode.A));
+        //    inputs.Add("Right", Input.GetKey(KeyCode.D));
+        //    inputs.Add("Left", Input.GetKey(KeyCode.A));
+        //    inputs.Add("Jump", PlayerControls.);
+        //    inputs.Add("Interact", Input.GetKey(KeyCode.W));
+        //    inputs.Add("Command", Input.GetKeyDown(KeyCode.S));
+        //    inputs.Add("RightDown", Input.GetKeyDown(KeyCode.D));
+        //    inputs.Add("LeftDown", Input.GetKeyDown(KeyCode.A));
         //}
 
 
@@ -88,13 +88,15 @@ public class Inventor : MonoBehaviour {
         
         //Interact
         if (_interact) {
-
+            if (command.Equals("follow")) {
+                robot.Interact();
+            }
         }
     }
 
     void DetectInputs() {
         //Detect last L/R input
-        if (_inputs["RightDown"]) {
+        if (inputs["RightDown"]) {
             if (_lastInput.Equals("left")) {
                 _speed = 0;
                 robot.speed = 0;
@@ -102,7 +104,7 @@ public class Inventor : MonoBehaviour {
             _lastInput = "right";
             robot.lastInput = "right";
         }
-        else if (_inputs["LeftDown"]) {
+        else if (inputs["LeftDown"]) {
             if (_lastInput.Equals("right")) {
                 _speed = 0;
                 robot.speed = 0;
@@ -113,35 +115,35 @@ public class Inventor : MonoBehaviour {
             
         }
         //Move right
-        if (_inputs["Right"]) {
+        if (inputs["Right"]) {
             _right = true;
         }
         else {
             _right = false;
         }
         //Move left
-        if (_inputs["Left"]) {
+        if (inputs["Left"]) {
             _left = true;
         }
         else {
             _left = false;
         }
         //Jump
-        if (_inputs["Jump"]) {
+        if (inputs["Jump"]) {
             _jump = true;
         }
         else {
             _jump = false;
         }
         //Interact
-        if (_inputs["Action1"]) {
+        if (inputs["Interact"]) {
             _interact = true;
         }
         else {
             _interact = false;
         }
         //Change command
-        if (_inputs["Command"]) {
+        if (inputs["Command"]) {
             if (command.Equals("follow")) {
                 command = "stay";
             }
@@ -184,7 +186,7 @@ public class Inventor : MonoBehaviour {
 
     void Jump() {
         //If touching ground, jump
-        if (isGrounded()) {
+        if (IsGrounded()) {
             _canDoubleJump = true;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * _jumpHeight;
         }
@@ -196,7 +198,7 @@ public class Inventor : MonoBehaviour {
         }
     }
 
-    bool isGrounded() {
+    bool IsGrounded() {
         RaycastHit2D raycastHit = Physics2D.BoxCast(GetComponent<BoxCollider2D>().bounds.center,
                                     GetComponent<BoxCollider2D>().bounds.size,
                                     0f, Vector2.down,.01f,platformLayerMask);

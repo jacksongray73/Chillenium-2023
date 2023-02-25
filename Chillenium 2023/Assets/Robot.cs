@@ -8,13 +8,14 @@ public class Robot : MonoBehaviour {
     public string lastInput;
     public float speed;
     private bool _canDoubleJump;
+    public bool interact = false;
     //public string command = "follow";
     void Start() {
         
     }
 
     void Update() {
-
+        interact = false;
     }
 
     public void Move() {
@@ -60,6 +61,10 @@ public class Robot : MonoBehaviour {
             _canDoubleJump = false;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * _jumpHeight;
         }
+    }
+
+    public void Interact() {
+        interact = true;
     }
 
     bool isGrounded() {
