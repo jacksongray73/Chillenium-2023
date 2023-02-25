@@ -1,25 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour {
+public class Inventor : MonoBehaviour {
     [SerializeField] private float _maxSpeed, _acceleration, _jumpHeight;
     [SerializeField] private LayerMask platformLayerMask;
+    [SerializeField] public string controlStyle;
+    [SerializeField] GameObject robot;
     private float _speed = 0;
     private bool _left, _right, _jump, _flip, _canDoubleJump;
     private string _lastInput = "";
+    private Dictionary<string, bool> _inputs;
+    public string command;
+
+    
     // Start is called before the first frame update
     void Start() {
-        _canDoubleJump = true;
+        
+    }
+
+    void Awake() {
+        command = "follow";
+
     }
 
     // Update is called once per frame
     void Update() {
-        //If grounded, reset double jump
-        if (isGrounded()) {
-            _canDoubleJump = true;
+        //Map inputs
+        _inputs = new Dictionary<string, bool>();
+        if (controlStyle == "one-handed") {
+            _inputs.Add("Right", Input.GetKey(KeyCode.D));
+            _inputs.Add("Left", Input.GetKey(KeyCode.A));
+            _inputs.Add("Jump", Input.GetKeyDown(KeyCode.Space));
+            _inputs.Add("Action1", Input.GetKey(KeyCode.W));
+            _inputs.Add("Command", Input.GetKeyDown(KeyCode.S));
+            _inputs.Add("RightDown", Input.GetKeyDown(KeyCode.D));
+            _inputs.Add("LeftDown", Input.GetKeyDown(KeyCode.A));
         }
-        //Check vertical acceleration
+        else if (controlStyle == "two-handed") {
+            _inputs.Add("Right", Input.GetKey(KeyCode.D));
+            _inputs.Add("Left", Input.GetKey(KeyCode.A));
+            _inputs.Add("Jump", Input.GetKeyDown(KeyCode.J));
+            _inputs.Add("Action1", Input.GetKey(KeyCode.K));
+            _inputs.Add("Command", Input.GetKeyDown(KeyCode.L));
+            _inputs.Add("RightDown", Input.GetKeyDown(KeyCode.D));
+            _inputs.Add("LeftDown", Input.GetKeyDown(KeyCode.A));
+        }
+        //else if (controlStyle == "controller") {
+        //    _inputs.Add("Right", Input.GetKey(KeyCode.D));
+        //    _inputs.Add("Left", Input.GetKey(KeyCode.A));
+        //    _inputs.Add("Jump", PlayerControls.);
+        //    _inputs.Add("Action1", Input.GetKey(KeyCode.W));
+        //    _inputs.Add("Command", Input.GetKeyDown(KeyCode.S));
+        //    _inputs.Add("RightDown", Input.GetKeyDown(KeyCode.D));
+        //    _inputs.Add("LeftDown", Input.GetKeyDown(KeyCode.A));
+        //}
+
 
         //Detect inputs
         DetectInputs();
@@ -45,45 +82,54 @@ public class Player : MonoBehaviour {
 
     void DetectInputs() {
         //Detect last L/R input
-        if (Input.GetKeyDown(KeyCode.D)) {
+        if (_inputs["RightDown"]) {
             if (_lastInput.Equals("left")) {
                 _speed = 0;
             }
             _lastInput = "right";
         }
-        else if (Input.GetKeyDown(KeyCode.A)) {
+        else if (_inputs["LeftDown"]) {
             if (_lastInput.Equals("right")) {
                 _speed = 0;
             }
             _lastInput = "left";
         }
         //Move right
-        if (Input.GetKey(KeyCode.D)) {
+        if (_inputs["Right"]) {
             _right = true;
         }
         else {
             _right = false;
         }
         //Move left
-        if (Input.GetKey(KeyCode.A)) {
+        if (_inputs["Left"]) {
             _left = true;
         }
         else {
             _left = false;
         }
         //Jump
-        if (Input.GetKeyDown(KeyCode.J)) {
+        if (_inputs["Jump"]) {
             _jump = true;
         }
         else {
             _jump = false;
         }
-        //Flip
-        if (Input.GetKeyDown(KeyCode.K)) {
+        //Action1
+        if (_inputs["Action1"]) {
             _flip = true;
         }
         else {
             _flip = false;
+        }
+        //Change command
+        if (_inputs["Command"]) {
+            if (command.Equals("follow")) {
+                command = "stay";
+            }
+            else {
+                command = "follow";
+            }
         }
     }
 
@@ -121,6 +167,7 @@ public class Player : MonoBehaviour {
     void Jump() {
         //If touching ground, jump
         if (isGrounded()) {
+            _canDoubleJump = true;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * _jumpHeight;
         }
 
@@ -134,8 +181,7 @@ public class Player : MonoBehaviour {
     bool isGrounded() {
         RaycastHit2D raycastHit = Physics2D.BoxCast(GetComponent<BoxCollider2D>().bounds.center,
                                     GetComponent<BoxCollider2D>().bounds.size,
-                                    0f, Vector2.down,1f,platformLayerMask);
-        Debug.Log("Grounded: " + raycastHit.collider != null);
+                                    0f, Vector2.down,.01f,platformLayerMask);
         return raycastHit.collider != null;
     }
 }
