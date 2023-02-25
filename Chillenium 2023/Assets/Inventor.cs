@@ -7,9 +7,9 @@ public class Inventor : MonoBehaviour {
     [SerializeField] private float _maxSpeed, _acceleration, _jumpHeight;
     [SerializeField] private LayerMask platformLayerMask;
     [SerializeField] public string controlStyle;
-    [SerializeField] GameObject robot;
+    [SerializeField] Robot robot;
     private float _speed = 0;
-    private bool _left, _right, _jump, _flip, _canDoubleJump;
+    private bool _left, _right, _jump, _interact, _canDoubleJump;
     private string _lastInput = "";
     private Dictionary<string, bool> _inputs;
     public string command;
@@ -61,21 +61,33 @@ public class Inventor : MonoBehaviour {
         //Detect inputs
         DetectInputs();
         //Move
-        if (_right || _left) {
+        if (_right ^ _left) {
             //Move and accelerate
             Move();
+            if (command.Equals("follow")) {
+                //Robot moves
+                robot.Move();
+            }
         }
         else {
             //Decrease speed
             Slow();
+            if (command.Equals("follow")) {
+                //Robot slows
+                robot.Slow();
+            }
         }
         //Jump
         if (_jump) {
             Jump();
+            if (command.Equals("follow")){
+                //Robot jumps
+                robot.Jump();
+            }
         }
         
-        //Flip
-        if (_flip) {
+        //Interact
+        if (_interact) {
 
         }
     }
@@ -85,14 +97,20 @@ public class Inventor : MonoBehaviour {
         if (_inputs["RightDown"]) {
             if (_lastInput.Equals("left")) {
                 _speed = 0;
+                robot.speed = 0;
             }
             _lastInput = "right";
+            robot.lastInput = "right";
         }
         else if (_inputs["LeftDown"]) {
             if (_lastInput.Equals("right")) {
                 _speed = 0;
+                robot.speed = 0;
+                
             }
             _lastInput = "left";
+            robot.lastInput = "left";
+            
         }
         //Move right
         if (_inputs["Right"]) {
@@ -115,12 +133,12 @@ public class Inventor : MonoBehaviour {
         else {
             _jump = false;
         }
-        //Action1
+        //Interact
         if (_inputs["Action1"]) {
-            _flip = true;
+            _interact = true;
         }
         else {
-            _flip = false;
+            _interact = false;
         }
         //Change command
         if (_inputs["Command"]) {
