@@ -6,19 +6,35 @@ public class Door : MonoBehaviour {
     [SerializeField] public Door companionDoor;
     [SerializeField] public Unlocker unlocker;
     [SerializeField] public bool locked;
+    private GameObject _currentRobot;
     void Start() {
         
     }
     // Update is called once per frame
     void Update() {
         if (unlocker != null && locked) {
-            locked = !unlocker.unlocked;
-            companionDoor.locked = !unlocker.unlocked;
+            locked = unlocker.locked;
+            companionDoor.locked = locked;
         }
-        
+
+        if (_currentRobot != null && _currentRobot.GetComponent<Robot>().interact) {
+            if (!locked) {
+                _currentRobot.transform.position = companionDoor.transform.position;
+            }
+        }
     }
 
-    public Transform GetDestination() {
-        return companionDoor.transform;
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("Robot")) {
+            _currentRobot = collision.gameObject;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.CompareTag("Robot")) {
+            if (collision.gameObject == _currentRobot) {
+                _currentRobot = null;
+            }
+        }
     }
 }

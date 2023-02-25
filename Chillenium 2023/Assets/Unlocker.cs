@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Unlocker : MonoBehaviour {
     private GameObject _currentInventor;
-    public bool unlocked = false;
+    public bool locked = true;
 
     void Update() {
         if (_currentInventor != null) {
             if (_currentInventor.GetComponent<Inventor>().inputs["Interact"]) {
-                unlocked = true;
+                locked = false;
             }
         }
     }
