@@ -7,8 +7,8 @@ public class Teleport : MonoBehaviour {
     private GameObject currentDoor;
 
     void Update() {
-        if (robot.interact) {
-            if (currentDoor != null) {
+        if (robot.interact && currentDoor != null) {
+            if (!currentDoor.GetComponent<Door>().locked) {
                 transform.position = currentDoor.GetComponent<Door>().companionDoor.transform.position;
             }
         }
