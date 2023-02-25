@@ -7,8 +7,15 @@ public class Unlocker : MonoBehaviour {
     public bool locked = true;
 
     void Update() {
-        if (_currentInventor != null) {
-            if (_currentInventor.GetComponent<Inventor>().inputs["Interact"]) {
+        if (CompareTag("Panel")) {
+            if (_currentInventor != null) {
+                if (_currentInventor.GetComponent<Inventor>().inputs["Interact"]) {
+                    locked = false;
+                }
+            }
+        }
+        else if (CompareTag("Button")) {
+            if (_currentInventor != null) {
                 locked = false;
             }
         }
@@ -21,7 +28,7 @@ public class Unlocker : MonoBehaviour {
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
-        if (collision.CompareTag("Door")) {
+        if (collision.CompareTag("Inventor")) {
             if (collision.gameObject == _currentInventor) {
                 _currentInventor = null;
             }

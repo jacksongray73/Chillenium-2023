@@ -156,10 +156,10 @@ public class Inventor : MonoBehaviour {
     void Move(){
         Vector3 position = transform.position;
         float direction = 0;
-        if (_lastInput.Equals("right")) {
+        if (inputs["Right"]) {
             direction = 1;
         }
-        else if (_lastInput.Equals("left")) {
+        else if (inputs["Left"]) {
             direction = -1;
         }
         if (_speed < _maxSpeed) {

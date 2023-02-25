@@ -5,10 +5,10 @@ using UnityEngine;
 public class Door : MonoBehaviour {
     [SerializeField] public Door companionDoor;
     [SerializeField] public Unlocker unlocker;
-    [SerializeField] public bool locked;
+    public bool locked;
     private GameObject _currentRobot;
     void Start() {
-        
+        locked = unlocker != null;
     }
     // Update is called once per frame
     void Update() {
