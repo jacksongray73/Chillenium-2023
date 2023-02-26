@@ -6,6 +6,7 @@ public class Unlocker : MonoBehaviour {
     
     private GameObject _currentInventor, _currentRobot;
     public bool locked = true;
+    [SerializeField] public Sprite unpressedButton, pressedButton; 
 
     void Update() {
         if (CompareTag("Panel")) {
@@ -18,6 +19,7 @@ public class Unlocker : MonoBehaviour {
         else if (CompareTag("Button")) {
             if (_currentRobot != null) {
                 locked = false;
+                GetComponent<SpriteRenderer>().sprite = pressedButton;
             }
         }
     }

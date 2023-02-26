@@ -146,9 +146,11 @@ public class Inventor : MonoBehaviour {
         if (inputs["Command"]) {
             if (command.Equals("follow")) {
                 command = "stay";
+                robot.GetComponent<Animator>().SetBool("Locked", true);
             }
             else {
                 command = "follow";
+                robot.GetComponent<Animator>().SetBool("Locked", false);
             }
         }
     }
@@ -157,11 +159,16 @@ public class Inventor : MonoBehaviour {
         Vector3 position = transform.position;
         float direction = 0;
         if (inputs["Right"]) {
+            GetComponent<Animator>().SetBool("Walking", true);
+            GetComponent<SpriteRenderer>().flipX = false;
             direction = 1;
         }
         else if (inputs["Left"]) {
+            GetComponent<Animator>().SetBool("Walking", true);
+            GetComponent<SpriteRenderer>().flipX = true;
             direction = -1;
         }
+        
         if (_speed < _maxSpeed) {
             _speed += _acceleration * Time.deltaTime;
             //Overshot correction
@@ -181,6 +188,11 @@ public class Inventor : MonoBehaviour {
             if (_speed < 0) {
                 _speed = 0;
             }
+
+            if (_speed == 0) {
+                GetComponent<Animator>().SetBool("Walking", false);
+            }
+
         }
     }
 
