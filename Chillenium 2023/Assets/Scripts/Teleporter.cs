@@ -14,23 +14,13 @@ public class Teleporter : MonoBehaviour {
 
     void Update() {
         if (_inventor!=null && _robot!=null) {
-
-            Quaternion inventorRot, robotRot;
-            
             //wait 3 seconds
             _standTimer += Time.deltaTime;
-            if(_standTimer%60 >= 3){
-                //Rotation
-                inventorRot = _inventor.transform.rotation;
-                robotRot = _robot.transform.rotation;
-                inventorRot.z++;
-                robotRot.z++;
-                _inventor.transform.rotation = inventorRot;
-                _robot.transform.rotation = robotRot;
-            }
-            if (_standTimer % 30 > 9) {
-                //Next level
+            if(_standTimer%60 <= 3){
 
+            }
+            if (_standTimer % 60 > 4) {
+                //next level
                 SceneManager.LoadScene(nextLevelName);
             }
         }

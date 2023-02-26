@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Unlocker : MonoBehaviour {
-    private GameObject _currentInventor;
+    
+    private GameObject _currentInventor, _currentRobot;
     public bool locked = true;
 
     void Update() {
@@ -15,7 +16,7 @@ public class Unlocker : MonoBehaviour {
             }
         }
         else if (CompareTag("Button")) {
-            if (_currentInventor != null) {
+            if (_currentRobot != null) {
                 locked = false;
             }
         }
@@ -25,12 +26,20 @@ public class Unlocker : MonoBehaviour {
         if (collision.CompareTag("Inventor")) {
             _currentInventor = collision.gameObject;
         }
+        if (collision.CompareTag("Robot")) {
+            _currentRobot = collision.gameObject;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.CompareTag("Inventor")) {
             if (collision.gameObject == _currentInventor) {
                 _currentInventor = null;
+            }
+        }
+        if (collision.CompareTag("Robot")) {
+            if (collision.gameObject == _currentRobot) {
+                _currentRobot = null;
             }
         }
     }
