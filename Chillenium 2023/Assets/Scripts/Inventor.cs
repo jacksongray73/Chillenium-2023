@@ -158,10 +158,12 @@ public class Inventor : MonoBehaviour {
         float direction = 0;
         if (inputs["Right"]) {
             direction = 1;
-            
+            // GetComponent<Animator>().controller = abNormal_invent_walk-Sheet_0.controller;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
         else if (inputs["Left"]) {
             direction = -1;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         if (_speed < _maxSpeed) {
             _speed += _acceleration * Time.deltaTime;
