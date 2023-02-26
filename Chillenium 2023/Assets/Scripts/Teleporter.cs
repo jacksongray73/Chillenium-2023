@@ -13,7 +13,6 @@ public class Teleporter : MonoBehaviour {
     }
 
     void Update() {
-        
         if (_inventor!=null && _robot!=null) {
             //wait 3 seconds
             float degreeIncrement = 0;
@@ -28,7 +27,6 @@ public class Teleporter : MonoBehaviour {
                 
                 SceneManager.LoadScene("HoldingHands");
 
-                SceneManager.LoadScene(nextLevelName);
             }
         }
         else {
