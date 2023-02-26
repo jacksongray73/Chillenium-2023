@@ -19,7 +19,7 @@ public class Teleporter : MonoBehaviour {
             if(_standTimer%60 <= 3){
 
             }
-            if (_standTimer % 60 > 4) {
+            if (_standTimer % 60 > 3) {
                 //next level
                 SceneManager.LoadScene(nextLevelName);
             }
