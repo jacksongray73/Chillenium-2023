@@ -18,7 +18,8 @@ public class Door : MonoBehaviour {
         }
 
         if (_currentRobot != null && _currentRobot.GetComponent<Robot>().interact) {
-            if (!locked) {
+            
+            if (!locked && _currentRobot.GetComponent<Robot>().isGrounded()) {
                 _currentRobot.transform.position = companionDoor.transform.position;
             }
         }

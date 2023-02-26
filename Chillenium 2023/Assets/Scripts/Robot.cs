@@ -68,7 +68,7 @@ public class Robot : MonoBehaviour {
         interact = true;
     }
 
-    bool isGrounded() {
+    public bool isGrounded() {
         RaycastHit2D raycastHit = Physics2D.BoxCast(GetComponent<BoxCollider2D>().bounds.center,
                                     GetComponent<BoxCollider2D>().bounds.size,
                                     0f, Vector2.down, .01f, platformLayerMask);
