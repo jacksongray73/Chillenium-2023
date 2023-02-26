@@ -8,22 +8,22 @@ public class PressToPlay : MonoBehaviour
 
     [SerializeField] string nextLevelName;
     float _launchPower = 100;
+    float timer = 0;
+    Vector2 direction;
     // Start is called before the first frame update
 
     void OnMouseOver()
     {
         if(Input.GetMouseButtonDown(0))
         {
-            timer = 0;
-            
-            GetComponent<Rigidbody2D>().AddForce( * _launchPower);
+            // shoot off
+            // GetComponent<Rigidbody2D>().AddForce(direction, _launchPower);
 
-            while(timer % 60 <= 2)
-            {
-                timer++;
-            }
+            // while(timer % 60 <= 2)
+            // {
+            //     timer++;
+            // }
             SceneManager.LoadScene(nextLevelName);
         }
-        
     }
 }
