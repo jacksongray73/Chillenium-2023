@@ -324,7 +324,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactTag: Robot
-  _speechBubble: {fileID: 1786989522}
+  _speechBubbleLocked: {fileID: 0}
+  _speechBubbleUnlocked: {fileID: 0}
+  locked: 0
 --- !u!1 &191838857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,7 +1226,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactTag: Inventor
-  _speechBubble: {fileID: 2017793238}
+  _speechBubbleLocked: {fileID: 0}
+  _speechBubbleUnlocked: {fileID: 0}
+  locked: 0
 --- !u!1 &708232345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,7 +1372,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactTag: Robot
-  _speechBubble: {fileID: 1786989522}
+  _speechBubbleLocked: {fileID: 0}
+  _speechBubbleUnlocked: {fileID: 0}
+  locked: 0
 --- !u!1 &721726402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3094,6 +3100,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 7
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 1
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 1, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -4020,7 +4036,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: c42e5fe6909a3a542b1e1a789d581443, type: 2}
   - m_RefCount: 36
     m_Data: {fileID: 11400000, guid: 9790eaeb1f8ef5144985f2655a3d9e0b, type: 2}
-  - m_RefCount: 66
+  - m_RefCount: 67
     m_Data: {fileID: 11400000, guid: b23f0bc7e3ecefa42b7fac20b4908d9e, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -4037,7 +4053,7 @@ Tilemap:
     m_Data: {fileID: -90068486, guid: 5ffeb60f4ebd8e2438e33da4899dd4a9, type: 3}
   - m_RefCount: 36
     m_Data: {fileID: 1249750725, guid: 5ffeb60f4ebd8e2438e33da4899dd4a9, type: 3}
-  - m_RefCount: 66
+  - m_RefCount: 67
     m_Data: {fileID: -1854719795, guid: 5ffeb60f4ebd8e2438e33da4899dd4a9, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 0
@@ -4058,7 +4074,7 @@ Tilemap:
       e31: 0
       e32: 4.71e-43
       e33: 4.74e-43
-  - m_RefCount: 203
+  - m_RefCount: 204
     m_Data:
       e00: 1
       e01: 0
@@ -4077,7 +4093,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 203
+  - m_RefCount: 204
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4691,6 +4707,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 3, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -4989,7 +5015,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 36cae31e7ceefc746aad57c1b8c6384e, type: 2}
   - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 6dd3c623dde371946a6c030c45be1e96, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 64a0636f035426244b909ae790676345, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: b4a1643c0326bfb4798144c90dc256ef, type: 2}
@@ -5006,7 +5032,7 @@ Tilemap:
     m_Data: {fileID: 1719921302, guid: 5ffeb60f4ebd8e2438e33da4899dd4a9, type: 3}
   - m_RefCount: 7
     m_Data: {fileID: -2076701072, guid: 5ffeb60f4ebd8e2438e33da4899dd4a9, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 1981180560, guid: 5ffeb60f4ebd8e2438e33da4899dd4a9, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -1582459694, guid: 5ffeb60f4ebd8e2438e33da4899dd4a9, type: 3}
@@ -5017,7 +5043,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: -703093977, guid: 5ffeb60f4ebd8e2438e33da4899dd4a9, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 39
+  - m_RefCount: 40
     m_Data:
       e00: 1
       e01: 0
@@ -5054,7 +5080,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 55
+  - m_RefCount: 56
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -5457,7 +5483,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactTag: Robot
-  _speechBubble: {fileID: 1786989522}
+  _speechBubbleLocked: {fileID: 0}
+  _speechBubbleUnlocked: {fileID: 0}
+  locked: 0
 --- !u!1 &1666521885
 GameObject:
   m_ObjectHideFlags: 0
@@ -5597,7 +5625,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactTag: Robot
-  _speechBubble: {fileID: 191838857}
+  _speechBubbleLocked: {fileID: 0}
+  _speechBubbleUnlocked: {fileID: 0}
+  locked: 0
 --- !u!61 &1714316571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5778,7 +5808,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactTag: Robot
-  _speechBubble: {fileID: 191838857}
+  _speechBubbleLocked: {fileID: 0}
+  _speechBubbleUnlocked: {fileID: 0}
+  locked: 0
 --- !u!61 &1716550758
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6241,7 +6273,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactTag: Robot
-  _speechBubble: {fileID: 1786989522}
+  _speechBubbleLocked: {fileID: 0}
+  _speechBubbleUnlocked: {fileID: 0}
+  locked: 0
 --- !u!1 &1935098425
 GameObject:
   m_ObjectHideFlags: 0

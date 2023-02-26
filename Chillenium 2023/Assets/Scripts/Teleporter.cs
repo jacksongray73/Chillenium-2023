@@ -17,7 +17,7 @@ public class Teleporter : MonoBehaviour {
             //wait 3 seconds
             _standTimer += Time.deltaTime;
             if(_standTimer%60 <= 3){
-
+                _inventor.transform.Rotate
             }
             if (_standTimer % 60 > 3) {
                 //next level
