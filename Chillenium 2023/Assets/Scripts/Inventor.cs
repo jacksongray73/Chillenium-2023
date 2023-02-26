@@ -154,17 +154,22 @@ public class Inventor : MonoBehaviour {
     }
 
     void Move(){
+
+    
+
         Vector3 position = transform.position;
         float direction = 0;
         if (inputs["Right"]) {
-            direction = 1;
-            // GetComponent<Animator>().controller = abNormal_invent_walk-Sheet_0.controller;
+            GetComponent<Animator>().SetBool("Walking", true);
             GetComponent<SpriteRenderer>().flipX = false;
+            direction = 1;
         }
         else if (inputs["Left"]) {
-            direction = -1;
+            GetComponent<Animator>().SetBool("Walking", true);
             GetComponent<SpriteRenderer>().flipX = true;
+            direction = -1;
         }
+        
         if (_speed < _maxSpeed) {
             _speed += _acceleration * Time.deltaTime;
             //Overshot correction
@@ -184,6 +189,11 @@ public class Inventor : MonoBehaviour {
             if (_speed < 0) {
                 _speed = 0;
             }
+
+            if (_speed == 0) {
+                GetComponent<Animator>().SetBool("Walking", false);
+            }
+
         }
     }
 
