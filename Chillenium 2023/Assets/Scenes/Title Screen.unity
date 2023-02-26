@@ -477,7 +477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 145342482}
   - component: {fileID: 145342481}
-  - component: {fileID: 145342480}
+  - component: {fileID: 145342483}
   m_Layer: 0
   m_Name: aBnormal_health_UI_3
   m_TagString: Untagged
@@ -485,18 +485,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &145342480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145342479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0cbefb5309311645b69108edefb2769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &145342481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -564,6 +552,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &145342483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145342479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace4bf0fda3608644ad5aa57c656f252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevelName: Level2
 --- !u!1 &149206809
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 729295918}
   - component: {fileID: 729295917}
+  - component: {fileID: 729295919}
   m_Layer: 0
   m_Name: aBnormal_health_UI_1
   m_TagString: Untagged
@@ -693,6 +695,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &729295919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729295916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace4bf0fda3608644ad5aa57c656f252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevelName: Level2
 --- !u!1 &1340651518
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +905,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6353eaf96e584694dbe80bdc79b8a9a6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.285
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0

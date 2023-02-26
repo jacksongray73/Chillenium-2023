@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PressToPlay : MonoBehaviour
 {
+
+    [SerializeField] string nextLevelName;
+
     // Start is called before the first frame update
     
     void Start()
@@ -12,15 +15,12 @@ public class PressToPlay : MonoBehaviour
         
     }
 
-    public void OnMouseDown()
+    public void Update()
     {
-        //SceneManager.LoadScene("Cutscene");
-        SceneManager.LoadScene("HoldingHands");
-    }
+        if(Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene(nextLevelName);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
