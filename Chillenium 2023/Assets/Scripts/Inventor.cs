@@ -158,6 +158,7 @@ public class Inventor : MonoBehaviour {
         float direction = 0;
         if (inputs["Right"]) {
             direction = 1;
+            
         }
         else if (inputs["Left"]) {
             direction = -1;
