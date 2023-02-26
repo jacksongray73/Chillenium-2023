@@ -27,9 +27,6 @@ public class Inventor : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
-        Animation();
-
         //Map inputs
         inputs = new Dictionary<string, bool>();
         if (controlStyle == "one-handed") {
@@ -160,7 +157,6 @@ public class Inventor : MonoBehaviour {
         Vector3 position = transform.position;
         float direction = 0;
         if (inputs["Right"]) {
-
             direction = 1;
         }
         else if (inputs["Left"]) {
@@ -208,19 +204,4 @@ public class Inventor : MonoBehaviour {
                                     0f, Vector2.down,.01f,platformLayerMask);
         return raycastHit.collider != null;
     }
-
-    void Animation()
-    {
-        // if (inputs["Right"]) {
-        //     //play walking
-            
-        // }
-        // else if (inputs["Left"]) {
-        //     //play walking
-        //     //transform -1
-            
-        // }
-    }
-
-
 }

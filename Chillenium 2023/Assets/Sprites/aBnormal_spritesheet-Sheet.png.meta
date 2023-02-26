@@ -113,7 +113,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,7 +134,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,7 +155,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,12 +171,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 128
         y: 288
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,12 +192,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 160
         y: 288
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 192
         y: 288
-        width: 32
+        width: 48
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,7 +231,28 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_10
+      name: aBnormal_spritesheet-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736f8efcc6b7f754995ba0fd01b91f34
+      internalID: -1265827734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aBnormal_spritesheet-Sheet_9
       rect:
         serializedVersion: 2
         x: 0
@@ -239,7 +260,28 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b3762a27506884abe9fe042035e106
+      internalID: 1819587147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aBnormal_spritesheet-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,12 +297,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_11
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,12 +318,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_12
       rect:
         serializedVersion: 2
-        x: 64
+        x: 96
         y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -297,12 +339,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_13
       rect:
         serializedVersion: 2
-        x: 96
+        x: 128
         y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -318,13 +360,13 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_14
       rect:
         serializedVersion: 2
-        x: 128
+        x: 160
         y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 6, y: 0, z: 6, w: 12}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -339,12 +381,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_15
       rect:
         serializedVersion: 2
-        x: 160
+        x: 192
         y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -360,12 +402,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_16
       rect:
         serializedVersion: 2
-        x: 192
+        x: 224
         y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -381,12 +423,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_17
       rect:
         serializedVersion: 2
-        x: 224
-        y: 256
+        x: 32
+        y: 224
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,7 +441,28 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_20
+      name: aBnormal_spritesheet-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb22e69d7834674184201327cc05d7b
+      internalID: 1726404986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aBnormal_spritesheet-Sheet_19
       rect:
         serializedVersion: 2
         x: 96
@@ -407,7 +470,28 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d715f3804e479854cbe36498111d1cba
+      internalID: -2076701072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aBnormal_spritesheet-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -423,12 +507,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_21
       rect:
         serializedVersion: 2
-        x: 128
+        x: 160
         y: 224
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -444,12 +528,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_22
       rect:
         serializedVersion: 2
-        x: 160
+        x: 192
         y: 224
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -465,12 +549,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_23
       rect:
         serializedVersion: 2
-        x: 192
+        x: 224
         y: 224
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -486,12 +570,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_24
       rect:
         serializedVersion: 2
-        x: 224
-        y: 224
+        x: 32
+        y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -507,12 +591,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_25
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -528,12 +612,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_26
       rect:
         serializedVersion: 2
-        x: 32
+        x: 96
         y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -549,12 +633,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_27
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -567,7 +651,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_30
+      name: aBnormal_spritesheet-Sheet_28
       rect:
         serializedVersion: 2
         x: 160
@@ -575,7 +659,49 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27fe367b97f136419ed48fad0900411
+      internalID: 2130399599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aBnormal_spritesheet-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aaec0455ccd23a40bafe4134dbebffb
+      internalID: -629377420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aBnormal_spritesheet-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -591,12 +717,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_31
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
+        x: 32
+        y: 160
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -612,12 +738,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_32
       rect:
         serializedVersion: 2
-        x: 224
-        y: 192
+        x: 64
+        y: 160
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -633,12 +759,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_33
       rect:
         serializedVersion: 2
-        x: 32
+        x: 96
         y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.62374353, y: 0.30820417}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -654,12 +780,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_34
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 160
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -675,12 +801,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_35
       rect:
         serializedVersion: 2
-        x: 96
+        x: 160
         y: 160
         width: 32
         height: 32
-      alignment: 9
-      pivot: {x: 0.5873697, y: 0.33774185}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -696,12 +822,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_36
       rect:
         serializedVersion: 2
-        x: 128
+        x: 192
         y: 160
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -717,12 +843,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_37
       rect:
         serializedVersion: 2
-        x: 160
+        x: 224
         y: 160
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -735,7 +861,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_40
+      name: aBnormal_spritesheet-Sheet_38
       rect:
         serializedVersion: 2
         x: 32
@@ -743,7 +869,49 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b463afe4d1d888a45ae8876fee3b7d56
+      internalID: 1604082221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aBnormal_spritesheet-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28157d2b3c5ec9c459694ffa0cbb2d80
+      internalID: 548921744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aBnormal_spritesheet-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -759,12 +927,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_41
       rect:
         serializedVersion: 2
-        x: 96
+        x: 192
         y: 128
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -780,12 +948,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_42
       rect:
         serializedVersion: 2
-        x: 160
-        y: 128
+        x: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -801,12 +969,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_43
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
+        x: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -822,12 +990,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_44
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 96
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -843,12 +1011,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_45
       rect:
         serializedVersion: 2
-        x: 32
+        x: 96
         y: 96
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -864,12 +1032,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_46
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 96
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -885,12 +1053,12 @@ TextureImporter:
       name: aBnormal_spritesheet-Sheet_47
       rect:
         serializedVersion: 2
-        x: 96
+        x: 160
         y: 96
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -903,7 +1071,28 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_51
+      name: aBnormal_spritesheet-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7694a4f218b98e4892ee51eb30c0469
+      internalID: -987453213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aBnormal_spritesheet-Sheet_49
       rect:
         serializedVersion: 2
         x: 224
@@ -911,7 +1100,49 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac187e29b5d6f1d42a29adc878e850e2
+      internalID: 2041066556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aBnormal_spritesheet-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3ad1c217fafb541b32f06c4026ff09
+      internalID: 1647797301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aBnormal_spritesheet-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -924,280 +1155,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 288
-        width: 48
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7305c7d81aa6b274799ce83c721b66e6
-      internalID: -819666234
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 288
-        width: 64
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9dad6b58d1355440bd567f3b8019d68
-      internalID: 1215683431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_53
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da0ab4b5d7e3ea444b98731c39b74a56
-      internalID: -540355517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01c5a578286b81844b92c9892332a83d
-      internalID: 1726404986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39c937d54c337d74a887821012416b1d
-      internalID: -2076701072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_28
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b79698ee16af6e45bbed6cef73fe68d
-      internalID: 2130399599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_29
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92c7d0e95552d5346ae221502274d234
-      internalID: -629377420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_38
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73369499c769a5a458948e2efc7cdf0b
-      internalID: 1604082221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_39
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 395b83bb7819e444a9a85f08b83e6f68
-      internalID: 548921744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_48
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0c882be2f47f2f45ba7a7705bc1a7bf
-      internalID: -987453213
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_49
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f569c68d25e5e0478d20f8f53e8d356
-      internalID: 2041066556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_50
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 229de210496e8ce47b9e3ba9b2fea9b9
-      internalID: 1647797301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: aBnormal_spritesheet-Sheet_52
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: deac4b641cd006341b5545ce6ba346cb
-      internalID: -404952575
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_54
       rect:
         serializedVersion: 2
         x: 224
@@ -1205,35 +1163,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93ce7120958abd84f84c9ada3eb5b16c
-      internalID: -1190277791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aBnormal_spritesheet-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c995b61baa364f04ea03b73e7edb24ee
-      internalID: -1265827734
+      spriteID: b2fa48652961c304fad06104fb10a529
+      internalID: -404952575
       vertices: []
       indices: 
       edges: []
@@ -1298,8 +1235,6 @@ TextureImporter:
       aBnormal_spritesheet-Sheet_50: 1647797301
       aBnormal_spritesheet-Sheet_51: 359855094
       aBnormal_spritesheet-Sheet_52: -404952575
-      aBnormal_spritesheet-Sheet_53: -540355517
-      aBnormal_spritesheet-Sheet_54: -1190277791
       aBnormal_spritesheet-Sheet_6: -819666234
       aBnormal_spritesheet-Sheet_7: -1265827734
       aBnormal_spritesheet-Sheet_8: 1215683431
