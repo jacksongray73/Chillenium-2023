@@ -10,7 +10,6 @@ public class DialogManager : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        Animator animator = new Animator();
         sentences = new Queue<string>();
     }
 
@@ -27,9 +26,20 @@ public class DialogManager : MonoBehaviour {
     public void DisplayNextSentence() {
         if (sentences.Count == 0) {
             EndDialog();
+            return;
         }
         string sentence = sentences.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
         dialogText.text = sentence;
+    }
+
+    IEnumerator TypeSentence(string sentence) {
+        dialogText.text = "";
+        foreach (char letter in sentence.ToCharArray()) {
+            dialogText.text += letter;
+            yield return null;
+        }
     }
 
     public void EndDialog() {
