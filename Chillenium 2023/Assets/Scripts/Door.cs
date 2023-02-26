@@ -12,30 +12,32 @@ public class Door : MonoBehaviour {
 
     void Start() {
         locked = unlocker != null;
+        _currentRobot = null;
     }
     // Update is called once per frame
     void Update() {
+        
         if (locked) {
             GetComponent<Interactable>().locked = true;
+            GetComponent<SpriteRenderer>().sprite = closedSmallDoor;
         }
         else {
+
+            GetComponent<SpriteRenderer>().sprite = openSmallDoor;
             GetComponent<Interactable>().locked = false;
         }
 
-        if (unlocker != null && locked) {
+        if (unlocker != null) {
             locked = unlocker.locked;
-            companionDoor.locked = locked;
         }
-        //Debug.Log(_currentRobot != null && _currentRobot.GetComponent<Robot>().interact);
-        if (_currentRobot != null && _currentRobot.GetComponent<Robot>().interact) {
+        //Debug.Log("Interact" + _currentRobot.GetComponent<Robot>().interact);
+        //Debug.Log("Unlocked" + !locked);
+        bool interact = _currentRobot != null && _currentRobot.GetComponent<Robot>().interact;
+        //Debug.Log(interact);
+        if (interact) {
             if (!locked) {
                 _currentRobot.transform.position = companionDoor.transform.position;
-
-                GetComponent<SpriteRenderer>().sprite = openSmallDoor;
                 
-            }
-            else {
-                GetComponent<SpriteRenderer>().sprite = closedSmallDoor;
             }
         }
     }
