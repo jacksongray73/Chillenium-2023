@@ -12,14 +12,20 @@ public class Door : MonoBehaviour {
     }
     // Update is called once per frame
     void Update() {
+        if (locked) {
+            GetComponent<Interactable>().locked = true;
+        }
+        else {
+            GetComponent<Interactable>().locked = false;
+        }
+
         if (unlocker != null && locked) {
             locked = unlocker.locked;
             companionDoor.locked = locked;
         }
 
         if (_currentRobot != null && _currentRobot.GetComponent<Robot>().interact) {
-            
-            if (!locked && _currentRobot.GetComponent<Robot>().isGrounded()) {
+            if (!locked) {
                 _currentRobot.transform.position = companionDoor.transform.position;
             }
         }

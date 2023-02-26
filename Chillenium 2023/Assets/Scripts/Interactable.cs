@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour {
     [SerializeField] string interactTag;
-    [SerializeField] GameObject _speechBubble;
+    [SerializeField] GameObject _speechBubbleLocked, _speechBubbleUnlocked;
     private float _speechBubbleHeight, _speechBubbleSpeed;
     private bool _showingBubble;
-    private GameObject _currentInteraction;
+    public bool locked;
+    private GameObject _currentInteraction, _currentSpeechBubble;
     void Start() {
         _speechBubbleHeight = 1;
         _speechBubbleSpeed = 10;
     }
 
     void Update() {
+        if (locked) {
+            _currentSpeechBubble = _speechBubbleLocked;
+        }
+        else {
+            _currentSpeechBubble = _speechBubbleUnlocked;
+        }
         if (_showingBubble) {
-            Vector3 bubblePos = _speechBubble.transform.position;
+            Vector3 bubblePos = _currentSpeechBubble.transform.position;
             Vector3 position = transform.position;
             if (bubblePos.y < transform.position.y + _speechBubbleHeight) {
                 bubblePos.y += _speechBubbleSpeed * Time.deltaTime;
                 if (bubblePos.y > position.y + _speechBubbleHeight) {
                     bubblePos.y = position.y + _speechBubbleHeight;
                 }
-                _speechBubble.transform.position = bubblePos;
+                _currentSpeechBubble.transform.position = bubblePos;
             }
         }
     }
@@ -33,7 +40,7 @@ public class Interactable : MonoBehaviour {
             //Pop up speech bubble
             Vector3 position = transform.position;
             position.y += 0;
-            _speechBubble.transform.position = position;
+            _currentSpeechBubble.transform.position = position;
             _showingBubble = true;
         }
     }
@@ -43,7 +50,7 @@ public class Interactable : MonoBehaviour {
             if (collision.gameObject == _currentInteraction) {
                 _currentInteraction = null;
                 //Remove speech bubble (moves it offscreen)
-                _speechBubble.transform.position = new Vector3(-10, -10, 0);
+                _currentSpeechBubble.transform.position = new Vector3(-10, -10, 0);
                 _showingBubble = false;
             }
         }

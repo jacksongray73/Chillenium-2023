@@ -72,7 +72,6 @@ public class Robot : MonoBehaviour {
         RaycastHit2D raycastHit = Physics2D.BoxCast(GetComponent<BoxCollider2D>().bounds.center,
                                     GetComponent<BoxCollider2D>().bounds.size,
                                     0f, Vector2.down, .01f, platformLayerMask);
-        Debug.Log(raycastHit.collider != null);
         return raycastHit.collider != null;
     }
 }
