@@ -26,7 +26,7 @@ public class Door : MonoBehaviour {
             locked = unlocker.locked;
             companionDoor.locked = locked;
         }
-
+        //Debug.Log(_currentRobot != null && _currentRobot.GetComponent<Robot>().interact);
         if (_currentRobot != null && _currentRobot.GetComponent<Robot>().interact) {
             if (!locked) {
                 _currentRobot.transform.position = companionDoor.transform.position;

@@ -27,6 +27,7 @@ public class Inventor : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
         //Map inputs
         inputs = new Dictionary<string, bool>();
         if (controlStyle == "one-handed") {
@@ -78,13 +79,13 @@ public class Inventor : MonoBehaviour {
             }
         }
         //Jump
-        if (_jump) {
-            Jump();
-            if (command.Equals("follow")){
-                //Robot jumps
-                robot.Jump();
-            }
-        }
+        //if (_jump) {
+        //    Jump();
+        //    if (command.Equals("follow")){
+        //        //Robot jumps
+        //        robot.Jump();
+        //    }
+        //}
         
         //Interact
         if (_interact) {
