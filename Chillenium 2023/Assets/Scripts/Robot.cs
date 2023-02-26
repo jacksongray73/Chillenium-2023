@@ -16,7 +16,7 @@ public class Robot : MonoBehaviour {
     }
 
     void Update() {
-        interact = false;
+
     }
 
     public void Move() {
@@ -62,10 +62,6 @@ public class Robot : MonoBehaviour {
             _canDoubleJump = false;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * _jumpHeight;
         }
-    }
-
-    public void Interact() {
-        interact = true;
     }
 
     public bool isGrounded() {

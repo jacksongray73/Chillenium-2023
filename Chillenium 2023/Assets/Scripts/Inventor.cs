@@ -86,11 +86,16 @@ public class Inventor : MonoBehaviour {
         //        robot.Jump();
         //    }
         //}
-        
+
         //Interact
         if (_interact) {
             if (command.Equals("follow")) {
-                robot.Interact();
+                robot.interact = true;
+            }
+        }
+        else {
+            if (command.Equals("follow")) {
+                robot.interact = false;
             }
         }
     }
