@@ -146,17 +146,16 @@ public class Inventor : MonoBehaviour {
         if (inputs["Command"]) {
             if (command.Equals("follow")) {
                 command = "stay";
+                robot.GetComponent<Animator>().SetBool("Locked", true);
             }
             else {
                 command = "follow";
+                robot.GetComponent<Animator>().SetBool("Locked", false);
             }
         }
     }
 
     void Move(){
-
-    
-
         Vector3 position = transform.position;
         float direction = 0;
         if (inputs["Right"]) {
