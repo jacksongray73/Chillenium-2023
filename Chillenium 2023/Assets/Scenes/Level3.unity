@@ -2619,8 +2619,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locked: 1
-  unpressedButton: {fileID: -789797112, guid: bb15876a3ecab58478e4038b5842c43f, type: 3}
-  pressedButton: {fileID: -1198862303, guid: bb15876a3ecab58478e4038b5842c43f, type: 3}
+  unpressedButton: {fileID: -1198862303, guid: bb15876a3ecab58478e4038b5842c43f, type: 3}
+  pressedButton: {fileID: -789797112, guid: bb15876a3ecab58478e4038b5842c43f, type: 3}
 --- !u!212 &1210802298
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4930,6 +4930,7 @@ GameObject:
   - component: {fileID: 1699740631}
   - component: {fileID: 1699740630}
   - component: {fileID: 1699740636}
+  - component: {fileID: 1699740637}
   m_Layer: 0
   m_Name: Inventor
   m_TagString: Inventor
@@ -5109,6 +5110,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialMenu: {fileID: 92413521}
   background: {fileID: 1363000130}
+--- !u!114 &1699740637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699740629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bcf529fd991e49ef808eb978d230e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1714316569
 GameObject:
   m_ObjectHideFlags: 0
