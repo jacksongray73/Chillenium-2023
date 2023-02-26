@@ -7,6 +7,9 @@ public class Door : MonoBehaviour {
     [SerializeField] public Unlocker unlocker;
     public bool locked;
     private GameObject _currentRobot;
+
+    [SerializeField] public Sprite closedSmallDoor, openSmallDoor; 
+
     void Start() {
         locked = unlocker != null;
     }
@@ -20,6 +23,12 @@ public class Door : MonoBehaviour {
         if (_currentRobot != null && _currentRobot.GetComponent<Robot>().interact) {
             if (!locked) {
                 _currentRobot.transform.position = companionDoor.transform.position;
+
+                GetComponent<SpriteRenderer>().sprite = openSmallDoor;
+                
+            }
+            else {
+                GetComponent<SpriteRenderer>().sprite = closedSmallDoor;
             }
         }
     }
