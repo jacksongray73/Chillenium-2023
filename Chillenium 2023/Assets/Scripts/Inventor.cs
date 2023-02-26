@@ -22,7 +22,6 @@ public class Inventor : MonoBehaviour {
 
     void Awake() {
         command = "follow";
-
     }
 
     // Update is called once per frame

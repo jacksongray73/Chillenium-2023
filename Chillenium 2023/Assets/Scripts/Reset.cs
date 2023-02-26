@@ -11,7 +11,7 @@ public class Reset : MonoBehaviour {
         if (Input.GetKey(resetKey)) {
             //wait 3 seconds
             _timer += Time.deltaTime;
-            if (_timer % 60 > 3) {
+            if (_timer % 60 > 2) {
                 //next level
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
