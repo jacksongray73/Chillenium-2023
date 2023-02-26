@@ -25,7 +25,7 @@ public class Teleporter : MonoBehaviour {
             if (_standTimer % 60 > 3) {
                 //next level
                 
-                SceneManager.LoadScene("HoldingHands");
+                SceneManager.LoadScene(nextLevelName);
 
             }
         }

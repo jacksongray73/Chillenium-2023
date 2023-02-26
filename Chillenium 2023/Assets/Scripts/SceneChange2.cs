@@ -14,7 +14,7 @@ public class SceneChange2 : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer % 60 >= 3){
+        if(timer % 60 >= 2.75){
             SceneManager.LoadScene(nextLevelName);
         } 
     }
