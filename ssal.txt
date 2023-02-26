@@ -1,0 +1,26 @@
+void Move(){
+
+        public Animator animator;
+
+        Vector3 position = transform.position;
+        float direction = 0;
+        if (inputs["Right"]) {
+            direction = 1;
+            animator.SetBool("Walking", true);
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (inputs["Left"]) {
+            direction = -1;
+            animator.SetBool("Walking", true);
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        if (_speed < _maxSpeed) {
+            _speed += _acceleration * Time.deltaTime;
+            //Overshot correction
+            if (_speed > _maxSpeed) {
+                _speed = _maxSpeed;
+            }
+        }
+        position.x = transform.position.x + _speed * direction * Time.deltaTime;
+        transform.position = position;
+    }
