@@ -13,11 +13,15 @@ public class Teleporter : MonoBehaviour {
     }
 
     void Update() {
+        
         if (_inventor!=null && _robot!=null) {
             //wait 3 seconds
+            float degreeIncrement = 0;
             _standTimer += Time.deltaTime;
             if(_standTimer%60 <= 3){
-
+                degreeIncrement ++;
+                _robot.transform.Rotate(0, degreeIncrement, 0);
+                _inventor.transform.Rotate(0, degreeIncrement, 0);
             }
             if (_standTimer % 60 > 3) {
                 //next level
